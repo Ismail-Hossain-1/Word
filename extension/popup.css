@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 250px; /* Adjust the width for a browser extension popup */
+    border: 1px solid rgb(73, 68, 68);
+    box-sizing: border-box;
+    background-image: url('icons/image.png');
+  }
+
+  h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: aliceblue;
+  }
+
+  select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: 6px;
+  }
+
+  /* Make sure dropdown options do not overflow the container */
+  select {
+    max-height: 150px;
+    overflow-y: auto; /* Enable vertical scroll if needed */
+  }
+
+  /* Optional: Add styling for the popup container to keep it tidy */
+  .popup-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  /* Ensure the body or container of the popup doesn't exceed the size */
+  body, .popup-container {
+    overflow: hidden;
+    height: auto;
+  }
+
+
+  /* Style for the toggle container */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  /* Hide the default checkbox */
+  .toggle {
+    display: none;
+  }
+  
+  /* Style for the label (the slider background) */
+  .toggle-label {
+    position: relative;
+    width: 58px;
+    height: 28px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the circle (the button) inside the slider */
+  .toggle-circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  /* When the checkbox is checked, the circle slides to the right */
+  .toggle:checked + .toggle-label .toggle-circle {
+    transform: translateX(30px);
+  }
+  
+  /* Change the slider color when checked */
+  .toggle:checked + .toggle-label {
+    background-color: #34e93a;
+  }
+  
+  /* Style for the state label */
+  .toggle-state {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Change the text when the toggle is checked */
+  .toggle:checked ~ #toggle-state {
+    color: #38eb3e;
+  }
+  
