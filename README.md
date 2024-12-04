@@ -32,7 +32,7 @@ Follow these steps to clone the repository and load the extension in developer m
 2. **Navigate to the Project Directory**:
 
     ```bash
-    cd Word
+    cd extension
     ```
 
 3. **Open Chrome**: Launch your Google Chrome browser.
